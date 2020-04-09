@@ -49,7 +49,7 @@ Things you may want to cover:
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|title|text|null: false|
+|title|string|null: false|
 |member|text||
 |user_id|integer|null: false, foreign_key: true|
 ### Association
