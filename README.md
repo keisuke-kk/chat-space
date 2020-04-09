@@ -50,7 +50,6 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |title|string|null: false|
-|member|text||
 |user_id|integer|null: false, foreign_key: true|
 ### Association
 - has_many :users, through: :users_groups
