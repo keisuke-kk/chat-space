@@ -30,7 +30,6 @@ Things you may want to cover:
 |name|string|null: false|
 |email|string|null: false|
 |password|string|null: false|
-|group_id|integer|foreign_key: true|
 ### Association
 - has_many :messages
 - has_many :groups, through: :users_groups
