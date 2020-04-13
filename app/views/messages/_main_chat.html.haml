@@ -36,8 +36,6 @@
         .inp__box
           %input.inp__box_message{name: "form", placeholder: "type a message", type: "text", value: "", style: "border:none"}/
           %label.inp__box__image
-            -# = link_to "#" do
-            -# %i.fas.fa-cog
             = icon('fas', 'image')
             %input.inp__box__image__file{name: "image", alt: "送信する", align: "middle", type: "file", style: "display:none"}/
         %input.inp__bt{type: "submit", value: "Send"}/
