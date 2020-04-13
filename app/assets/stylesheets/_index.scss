@@ -1,0 +1,212 @@
+.wrapper {
+  display: flex;
+
+  .side {
+
+    &__bar {
+      height: 100vh;
+      width: 300px;
+
+      &_user-name {
+        height: 100px;
+        width: 300px;  
+        background: {
+          color: #253141;
+        }
+        display: flex;
+        
+        .top {
+          height: 100px;
+          width: 300px;  
+          justify-content: center;
+          align-items: center;
+          display: flex;
+
+          &__items {
+            height: 20px;
+            width: 260px;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+
+            &_name {
+              align-items: center;
+              color: #ffffff;
+            }
+
+            &_icons {
+              align-items: center;
+              display: flex;
+
+              i {
+                color: #ffffff;
+                justify-content: flex-end;
+              }
+                .far.fa-edit {
+                }
+
+                .fas.fa-cog {
+                  margin-left: 5px;
+                }
+
+            }
+          }
+        }
+      }
+
+      &_group-list {
+        height: calc(100% - 100px);
+        width: 300px;
+        background: {
+          color: #2f3e51;
+        }
+        color: #ffffff;
+        padding: 20px;
+
+        .title {
+          font-size: 15px;
+          margin-bottom: 5px;
+        }
+
+        .message {
+          font-size: 14px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  .chat {
+    height: 100vh;
+    width: calc(100vw - 300px);
+
+    &__main {
+      height: 100vh;
+      width: 100%;
+
+      &_group-info {
+        height: 100px;
+        width: 100%;
+        background: {
+          color: #ffffff;
+        } 
+        
+        .inf {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          padding: 0px 40px;
+
+          &__log {
+
+            &_title {
+              padding: 35px 0px 15px 0px;
+              font-size: 20px;
+              color: #333333;
+            }
+
+            &_member {
+              color: #999999;
+              font-size: 12px;
+            }
+          }
+
+          &__edit {
+            line-height: 40px;
+            margin: 28px 0px;
+            padding: 0px 20px;
+            border: solid thin #38aef0;
+            .Editlink {
+              color: #38aef0;
+              font-size: 16px;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+
+      &_message-list {
+        height: calc(100vh - 100px - 90px);
+        width: 100%;
+        background: {
+          color: #fafafa;
+        }
+        padding: 35px 40px;
+
+        .box {
+          display: flex;
+
+          &__name {
+            color: #333333;
+            font-size: 16px;
+          }
+
+          &__date {
+            color: #999999;
+            font-size: 12px;
+            margin-left: 10px;
+          }
+        }
+
+        .message {
+          color: #434A54;
+          font-size: 14px;
+          margin-bottom: 46px;
+        }
+
+      }
+
+      &_message-form {
+        height: 90px;
+        width: 100%;
+        background: {
+          color: #d2d2d2;
+        }
+
+        .inp {
+          padding: 20px 40px;
+          display: flex;
+          align-items: center;
+
+          &__box {
+            height: 50px;
+            padding: 0px 10px;
+            margin-right: 15px;
+            width: calc(100% - 100px);
+            background-color: #ffffff;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &_message {
+              color: #d2d2d2;
+            }
+
+            &__image {
+              position: absolute;
+              right: 10px;
+
+              .fas.fa-image {
+                display: inline-block;
+                font-size: 1.5em;
+              }
+
+              &__file {
+                display: none;
+              }
+            }            
+          }
+
+          &__bt {
+            width: 100px;
+            height: 50px;
+            background-color: #38aef0;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}
