@@ -1,48 +1,43 @@
-!!!
-%html{}
-  %head
-    %meta{charset: "utf-8"}
-  %body
-    .chat
-      .chat__main
-        .chat__main_group-info
-          .inf
-            .inf__log
-              .inf__log_title
-                title
-              .inf__log_member
-                Member:name
-            .inf__edit
-              = link_to 'Edit', "#", class: "Editlink" 
-        .chat__main_message-list
-          .box
-            .box__name
-              keisuke
-            .box__date
-              2020/4/12(sun) 20:24:01
-          .message
-            こんばんは！
-          .box
-            .box__name
-              keisuke
-            .box__date
-              2020/4/12(sun) 20:24:01
-          .message
-            こんばんは！
-          .box
-            .box__name
-              keisuke
-            .box__date
-              2020/4/12(sun) 20:24:01
-          .message
-            こんばんは！
-        .chat__main_message-form
-          .inp
-            .inp__box
-              %input.inp__box_message{:name => "form", :placeholder => "type a message", :type => "text", :value => "", :style => "border:none"}/
-              %label.inp__box__image
-                -# = link_to "#" do
-                -# %i.fas.fa-cog
-                = icon('fas', 'image')
-                %input.inp__box__image__file{:name => "image", :alt => "送信する", :align => "middle", :type => "file", :style => "display:none"}/
-            %input.inp__bt{:type => "submit", :value => "Send"}/
+.chat
+  .chat__main
+    .chat__main_group-info
+      .inf
+        .inf__log
+          .inf__log_title
+            title
+          .inf__log_member
+            Member:name
+        .inf__edit
+          = link_to 'Edit', "#", class: "Editlink" 
+    .chat__main_message-list
+      .box
+        .box__name
+          keisuke
+        .box__date
+          2020/4/12(sun) 20:24:01
+      .message
+        こんばんは！
+      .box
+        .box__name
+          keisuke
+        .box__date
+          2020/4/12(sun) 20:24:01
+      .message
+        こんばんは！
+      .box
+        .box__name
+          keisuke
+        .box__date
+          2020/4/12(sun) 20:24:01
+      .message
+        こんばんは！
+    .chat__main_message-form
+      .inp
+        .inp__box
+          %input.inp__box_message{:name => "form", :placeholder => "type a message", :type => "text", :value => "", :style => "border:none"}/
+          %label.inp__box__image
+            -# = link_to "#" do
+            -# %i.fas.fa-cog
+            = icon('fas', 'image')
+            %input.inp__box__image__file{:name => "image", :alt => "送信する", :align => "middle", :type => "file", :style => "display:none"}/
+        %input.inp__bt{:type => "submit", :value => "Send"}/
