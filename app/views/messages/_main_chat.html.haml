@@ -4,38 +4,24 @@
       .inf
         .inf__log
           .inf__log_title
-            title
+            = @group.name
           .inf__log_member
-            Member:name
+            -@group.users.each do |user| 
+              = user.name
         .inf__edit
-          = link_to 'Edit', "#", class: "Editlink" 
+          = link_to 'Edit', edit_group_path(@group), class: "Editlink" 
     .chat__main_message-list
-      .box
-        .box__name
-          keisuke
-        .box__date
-          2020/4/12(sun) 20:24:01
-      .message
-        こんばんは！
-      .box
-        .box__name
-          keisuke
-        .box__date
-          2020/4/12(sun) 20:24:01
-      .message
-        こんばんは！
-      .box
-        .box__name
-          keisuke
-        .box__date
-          2020/4/12(sun) 20:24:01
-      .message
-        こんばんは！
+
+      .messages
+        = render @messages
+      
     .chat__main_message-form
       .inp
-        .inp__box
-          %input.inp__box_message{name: "form", placeholder: "type a message", type: "text", value: "", style: "border:none"}/
-          %label.inp__box__image
-            = icon('fas', 'image')
-            %input.inp__box__image__file{name: "image", alt: "送信する", align: "middle", type: "file", style: "display:none"}/
-        %input.inp__bt{type: "submit", value: "Send"}/
+        = form_for [@group, @message] do |f|
+          .inp__box
+            = f.text_field :text, class: 'inp__box__message', placeholder: 'type a message'
+            .inp__box__image
+              = f.label :image, class: 'inp__box__image__file' do
+                = icon('fas', 'image', class: 'icon')
+                = f.file_field :image, class: 'hidden'
+          = f.submit 'Send', class: 'inp__bt'

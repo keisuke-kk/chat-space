@@ -1,0 +1,12 @@
+.message
+  .box
+    .box__name
+      = message.user.name
+    .box__date
+      = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+  .ms
+    - if message.text.present?
+      %p.ms__text
+        = message.text
+    = image_tag message.image.url, class: 'ms__image' if message.image.present?
+ 
