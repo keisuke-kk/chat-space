@@ -11,9 +11,7 @@
         .inf__edit
           = link_to 'Edit', edit_group_path(@group), class: "Editlink" 
     .chat__main_message-list
-
-      .messages
-        = render @messages
+      = render @messages
       
     .chat__main_message-form
       .inp
