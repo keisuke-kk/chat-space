@@ -56,7 +56,6 @@ $(function(){
        $('.chat__main_message-list').append(html);
        $('.chat__main_message-list').animate({ scrollTop: $('.chat__main_message-list')[0].scrollHeight });
        $('form')[0].reset();
-       console.log("reset")
        $('.inp__bt').attr("disabled", false);
      })
      .fail(function() {
