@@ -32,8 +32,8 @@ $(function() {
     $(`#${userId}`).append(html);
   }
 
-  $(".chat-group-form__input").on("keyup", function() {
-    let input = $(".chat-group-form__input").val();
+  $("#user-search-field").on("keyup", function() {
+    let input = $("#user-search-field").val();
     $.ajax({
       type: "GET",
       url: "/users",
@@ -42,6 +42,7 @@ $(function() {
     })
       .done(function(users) {
         $("#user-search-result").empty();
+        console.log(users)
 
         if (users.length !== 0) {
           users.forEach(function(user) {
