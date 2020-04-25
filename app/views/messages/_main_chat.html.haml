@@ -7,7 +7,7 @@
             = @group.name
           .inf__log_member
             - @group.users.each do |user| 
-              = user.name
+              = "Member: " + user.name
         .inf__edit
           = link_to 'Edit', edit_group_path(@group), class: "Editlink" 
     .chat__main_message-list
